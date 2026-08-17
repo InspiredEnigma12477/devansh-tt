@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, googleMaps, navLinks, phoneLinks, services, whatsappMessages } from "@/data/business";
+import { business, footerLinks, googleMaps, phoneLinks, services, whatsappMessages } from "@/data/business";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
@@ -29,7 +29,7 @@ export function Footer() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-white">Quick Links</p>
             <ul className="mt-4 space-y-2 text-sm">
-              {navLinks.map((link) => (
+              {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="transition-colors hover:text-amber-400">
                     {link.label}

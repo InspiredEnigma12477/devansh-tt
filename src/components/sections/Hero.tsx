@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { business, phoneLinks, whatsappMessages } from "@/data/business";
 import { Cta } from "@/components/ui/Cta";
-import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { TrustStrip } from "@/components/sections/TrustStrip";
-import { PhoneIcon, ArrowRightIcon } from "@/components/ui/icons";
 
 export function Hero() {
   return (
@@ -20,25 +19,23 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="inline-flex items-center rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400">
+            <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               Tours &amp; Travel From Pune
-            </p>
-            <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              {business.tagline}
             </h1>
+            <p className="mt-3 text-2xl font-semibold text-amber-400 sm:text-3xl">{business.tagline}</p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
               Comfortable outstation travel, customized tours, family trips and group travel — planned around you.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
-              <WhatsAppCTA message={whatsappMessages.general} size="lg">
-                WhatsApp Now
-              </WhatsAppCTA>
-              <Cta href={phoneLinks.primary.tel} variant="primary" size="lg" icon={<PhoneIcon className="h-5 w-5" />}>
-                Call Now
+              <Cta href={buildWhatsAppLink(whatsappMessages.general)} variant="whatsapp" size="lg">
+                💬 WhatsApp Now
               </Cta>
-              <Cta href="#enquiry" variant="ghost" size="lg" icon={<ArrowRightIcon className="h-5 w-5" />}>
-                Plan Your Trip
+              <Cta href={phoneLinks.primary.tel} variant="primary" size="lg">
+                📞 Call Now
+              </Cta>
+              <Cta href="#enquiry" variant="ghost" size="lg">
+                📝 Plan My Trip
               </Cta>
             </div>
 

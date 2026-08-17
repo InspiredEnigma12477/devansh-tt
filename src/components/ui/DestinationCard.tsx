@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Destination } from "@/data/business";
 import { whatsappMessages } from "@/data/business";
 import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 export function DestinationCard({ destination }: { destination: Destination }) {
   return (
@@ -20,9 +22,18 @@ export function DestinationCard({ destination }: { destination: Destination }) {
 
       <div className="p-5">
         <p className="text-sm leading-relaxed text-slate-600">{destination.description}</p>
-        <WhatsAppCTA message={whatsappMessages.destination(destination.name)} size="md" className="mt-5 w-full">
-          Get Quote
-        </WhatsAppCTA>
+        <div className="mt-5 flex items-center gap-4">
+          <Link
+            href="#enquiry"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-950 transition-colors hover:text-amber-600"
+          >
+            Explore
+            <ArrowRightIcon className="h-4 w-4" />
+          </Link>
+          <WhatsAppCTA message={whatsappMessages.destination(destination.name)} size="md">
+            Get Quote
+          </WhatsAppCTA>
+        </div>
       </div>
     </div>
   );

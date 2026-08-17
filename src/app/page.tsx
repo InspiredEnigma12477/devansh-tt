@@ -1,6 +1,8 @@
 import { Hero } from "@/components/sections/Hero";
+import { TrustCards } from "@/components/sections/TrustCards";
 import { About } from "@/components/sections/About";
 import { Fleet } from "@/components/sections/Fleet";
+import { PopularTrips } from "@/components/sections/PopularTrips";
 import { Destinations } from "@/components/sections/Destinations";
 import { Outstation } from "@/components/sections/Outstation";
 import { Services } from "@/components/sections/Services";
@@ -8,7 +10,7 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { EnquiryForm } from "@/components/sections/EnquiryForm";
 import { Reviews } from "@/components/sections/Reviews";
-import { InstagramCta } from "@/components/sections/InstagramCta";
+import { InstagramGallery } from "@/components/sections/InstagramGallery";
 import { GoogleMapsSection } from "@/components/sections/GoogleMapsSection";
 import { Contact } from "@/components/sections/Contact";
 
@@ -16,8 +18,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrustCards />
       <About />
       <Fleet />
+      <PopularTrips />
       <Destinations />
       <Outstation />
       <Services />
@@ -25,7 +29,7 @@ export default function Home() {
       <HowItWorks />
       <EnquiryForm />
       <Reviews />
-      <InstagramCta />
+      <InstagramGallery />
       <GoogleMapsSection />
       <Contact />
     </>

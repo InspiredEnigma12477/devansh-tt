@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = `Tours and Travels in Pune | Outstation Cabs — ${business.name}`;
-const description = `${business.description} Ertiga & Kia Carens rentals, Pune to Goa, Mahabaleshwar & Mumbai cabs, and custom tour packages.`;
+const title = `${business.name} | Tours & Outstation Travel in Pune`;
+const description =
+  "Devansh Tours & Travel offers outstation travel, customized tours, family trips, group travel and comfortable travel services from Pune. Call or WhatsApp for a quote.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
     "Pune to Mahabaleshwar Cab",
     "Pune to Mumbai Cab",
     "Pune Tour Packages",
-    "Family Tours From Pune",
-    "Ertiga Rental Pune",
-    "Kia Carens Rental Pune",
+    "Family Trips From Pune",
+    "Ertiga Travel Pune",
+    "Kia Carens Travel Pune",
   ],
   authors: [{ name: business.name }],
   alternates: { canonical: "/" },
@@ -67,7 +68,7 @@ export const viewport: Viewport = {
   themeColor: "#0a1226",
 };
 
-const structuredData = {
+const travelAgencySchema = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   name: business.name,
@@ -87,15 +88,26 @@ const structuredData = {
     longitude: googleMaps.longitude,
   },
   hasMap: googleMaps.shareUrl,
-  areaServed: "IN",
+  areaServed: {
+    "@type": "City",
+    name: business.city,
+  },
   sameAs: business.social.instagram ? [business.social.instagram] : [],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: business.name,
+  url: siteUrl,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencySchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className="min-h-full flex flex-col">
         <Navbar />

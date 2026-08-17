@@ -29,7 +29,7 @@ export function GoogleMapsSection() {
             Get Directions
           </Cta>
           <Cta href={googleMaps.shareUrl} variant="secondary" icon={<ArrowRightIcon className="h-4 w-4" />}>
-            View on Google Maps
+            Open Google Maps
           </Cta>
         </div>
       </div>

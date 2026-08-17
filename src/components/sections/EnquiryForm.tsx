@@ -1,13 +1,18 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { whatsappMessages } from "@/data/business";
+import { vehicleOptions, whatsappMessages } from "@/data/business";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
 const inputClasses =
   "mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-navy-950 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/30";
+const errorClasses = "mt-1.5 text-xs font-medium text-red-600";
+
+const INDIAN_MOBILE_PATTERN = /^[6-9]\d{9}$/;
+
+type FormErrors = Partial<Record<"name" | "mobile" | "destination" | "travelDate" | "travelers", string>>;
 
 export function EnquiryForm() {
   const [name, setName] = useState("");
@@ -15,12 +20,31 @@ export function EnquiryForm() {
   const [destination, setDestination] = useState("");
   const [travelDate, setTravelDate] = useState("");
   const [travelers, setTravelers] = useState("");
+  const [vehicle, setVehicle] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  function validate(): FormErrors {
+    const nextErrors: FormErrors = {};
+    if (!name.trim()) nextErrors.name = "Please enter your name.";
+    if (!INDIAN_MOBILE_PATTERN.test(mobile.trim())) nextErrors.mobile = "Enter a valid 10-digit Indian mobile number.";
+    if (!destination.trim()) nextErrors.destination = "Please enter a destination.";
+    if (!travelDate) nextErrors.travelDate = "Please select a travel date.";
+    const travelersCount = Number(travelers);
+    if (!travelers || !Number.isFinite(travelersCount) || travelersCount < 1) {
+      nextErrors.travelers = "Enter the number of travelers.";
+    }
+    return nextErrors;
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const nextErrors = validate();
+    setErrors(nextErrors);
+    if (Object.keys(nextErrors).length > 0) return;
+
     const link = buildWhatsAppLink(
-      whatsappMessages.enquiryForm({ name, mobile, destination, travelDate, travelers, message })
+      whatsappMessages.enquiryForm({ name, destination, travelDate, travelers, vehicle, message })
     );
     window.open(link, "_blank", "noopener,noreferrer");
   }
@@ -43,12 +67,14 @@ export function EnquiryForm() {
                 <input
                   type="text"
                   required
+                  aria-invalid={Boolean(errors.name)}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className={inputClasses}
                   placeholder="Your full name"
                   autoComplete="name"
                 />
+                {errors.name ? <p className={errorClasses}>{errors.name}</p> : null}
               </label>
 
               <label className="block text-sm font-medium text-navy-950">
@@ -56,6 +82,7 @@ export function EnquiryForm() {
                 <input
                   type="tel"
                   required
+                  aria-invalid={Boolean(errors.mobile)}
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
                   className={inputClasses}
@@ -63,39 +90,61 @@ export function EnquiryForm() {
                   autoComplete="tel"
                   inputMode="tel"
                 />
+                {errors.mobile ? <p className={errorClasses}>{errors.mobile}</p> : null}
               </label>
 
               <label className="block text-sm font-medium text-navy-950">
                 Destination
                 <input
                   type="text"
+                  required
+                  aria-invalid={Boolean(errors.destination)}
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
                   className={inputClasses}
-                  placeholder="e.g. Kerala"
+                  placeholder="e.g. Goa"
                 />
+                {errors.destination ? <p className={errorClasses}>{errors.destination}</p> : null}
               </label>
 
               <label className="block text-sm font-medium text-navy-950">
                 Travel Date
                 <input
                   type="date"
+                  required
+                  aria-invalid={Boolean(errors.travelDate)}
                   value={travelDate}
                   onChange={(e) => setTravelDate(e.target.value)}
                   className={inputClasses}
                 />
+                {errors.travelDate ? <p className={errorClasses}>{errors.travelDate}</p> : null}
               </label>
 
-              <label className="block text-sm font-medium text-navy-950 sm:col-span-2">
+              <label className="block text-sm font-medium text-navy-950">
                 Number of Travelers
                 <input
                   type="number"
                   min={1}
+                  required
+                  aria-invalid={Boolean(errors.travelers)}
                   value={travelers}
                   onChange={(e) => setTravelers(e.target.value)}
                   className={inputClasses}
                   placeholder="e.g. 4"
                 />
+                {errors.travelers ? <p className={errorClasses}>{errors.travelers}</p> : null}
+              </label>
+
+              <label className="block text-sm font-medium text-navy-950">
+                Vehicle Preference
+                <select value={vehicle} onChange={(e) => setVehicle(e.target.value)} className={inputClasses}>
+                  <option value="">Select a vehicle</option>
+                  {vehicleOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
               </label>
 
               <label className="block text-sm font-medium text-navy-950 sm:col-span-2">

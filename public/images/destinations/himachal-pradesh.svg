@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of snow-capped mountain peaks with pine trees, representing Himachal Pradesh">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="34%" r="30%">
+      <stop offset="0%" stop-color="#f0f4fa" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#f0f4fa" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#glow)" />
+  <path d="M0 620 L220 380 L420 560 L620 320 L840 560 L1040 400 L1200 600 L1200 900 L0 900 Z" fill="#223868" />
+  <path d="M180 460 L220 380 L260 460 Z" fill="#f0f4fa" />
+  <path d="M580 400 L620 320 L660 400 Z" fill="#f0f4fa" />
+  <path d="M1000 480 L1040 400 L1080 480 Z" fill="#f0f4fa" />
+  <path d="M0 720 L260 540 L500 700 L740 520 L980 700 L1200 560 L1200 900 L0 900 Z" fill="#101d38" />
+  <g fill="#0a1226">
+    <path d="M330 760 L360 690 L390 760 Z" />
+    <path d="M355 800 L385 730 L415 800 Z" />
+    <path d="M840 780 L870 710 L900 780 Z" />
+    <path d="M865 820 L895 750 L925 820 Z" />
+  </g>
+</svg>

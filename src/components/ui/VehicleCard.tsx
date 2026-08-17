@@ -17,7 +17,8 @@ export function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
 
       <div className="p-6">
         <h3 className="text-xl font-bold text-navy-950">{vehicle.name}</h3>
-        <p className="mt-1 text-sm text-slate-600">{vehicle.description}</p>
+        <p className="mt-1 text-sm font-semibold text-amber-600">{vehicle.tagline}</p>
+        <p className="mt-2 text-sm text-slate-600">{vehicle.description}</p>
 
         <ul className="mt-4 flex flex-wrap gap-2">
           {vehicle.useCases.map((useCase) => (
