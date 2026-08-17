@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of a kite over a white desert landscape, representing Gujarat">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="38%" r="26%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#sun)" />
+  <path d="M0 740 L1200 740 L1200 900 L0 900 Z" fill="#f0f4fa" opacity="0.92" />
+  <path d="M0 740 C 300 720 900 720 1200 740 L1200 760 C 900 742 300 742 0 760 Z" fill="#dce6f5" />
+  <g transform="translate(600 380)">
+    <path d="M0 -80 L60 0 L0 80 L-60 0 Z" fill="#f59e0b" />
+    <path d="M-60 0 L60 0 M0 -80 L0 80" stroke="#0a1226" stroke-width="2" opacity="0.4" />
+    <path d="M0 80 C 20 160 -10 220 10 280" stroke="#f0f4fa" stroke-width="2" fill="none" opacity="0.6" />
+  </g>
+  <g transform="translate(360 300)">
+    <path d="M0 -50 L40 0 L0 50 L-40 0 Z" fill="#fbbf24" opacity="0.9" />
+  </g>
+  <g transform="translate(880 260)">
+    <path d="M0 -36 L30 0 L0 36 L-30 0 Z" fill="#fbbf24" opacity="0.8" />
+  </g>
+</svg>

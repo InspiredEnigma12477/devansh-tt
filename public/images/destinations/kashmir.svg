@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of a shikara boat on a lake beneath snow peaks, representing Kashmir">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="30%">
+      <stop offset="0%" stop-color="#f0f4fa" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#f0f4fa" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#glow)" />
+  <path d="M0 520 L240 320 L460 500 L680 280 L900 500 L1120 340 L1200 420 L1200 700 L0 700 Z" fill="#223868" />
+  <path d="M200 400 L240 320 L280 400 Z" fill="#f0f4fa" />
+  <path d="M640 360 L680 280 L720 360 Z" fill="#f0f4fa" />
+  <path d="M1080 400 L1120 340 L1150 400 Z" fill="#f0f4fa" />
+  <rect y="680" width="1200" height="220" fill="#101d38" />
+  <path d="M0 690 L1200 690 L1200 705 L0 705 Z" fill="#3c5fa0" opacity="0.5" />
+  <g fill="#0a1226">
+    <path d="M460 760 C 460 730 740 730 740 760 L780 780 L420 780 Z" />
+    <path d="M560 730 C 590 690 610 690 640 730 Z" />
+  </g>
+</svg>

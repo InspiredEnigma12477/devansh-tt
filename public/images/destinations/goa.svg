@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of palm trees on a beach at sunset, representing Goa">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="46%" r="26%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#sun)" />
+  <circle cx="600" cy="410" r="70" fill="#fbbf24" />
+  <path d="M0 700 C 300 660 900 660 1200 700 L1200 900 L0 900 Z" fill="#101d38" />
+  <path d="M0 720 C 300 690 900 690 1200 720 L1200 760 C 900 730 300 730 0 760 Z" fill="#223868" opacity="0.7" />
+  <g fill="#0a1226">
+    <path d="M220 680 C 210 560 260 480 220 420 C 300 460 320 540 300 600 C 340 560 380 560 400 600 C 360 620 320 660 300 690 C 280 650 250 660 220 680 Z" />
+    <rect x="295" y="600" width="14" height="100" />
+  </g>
+  <g fill="#0a1226">
+    <path d="M960 700 C 950 590 1000 510 960 450 C 1030 490 1050 560 1030 620 C 1065 585 1100 585 1120 620 C 1085 640 1050 675 1030 705 C 1010 670 985 680 960 700 Z" />
+    <rect x="1025" y="620" width="12" height="90" />
+  </g>
+</svg>

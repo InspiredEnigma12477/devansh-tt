@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of a desert fort with domes, representing Rajasthan">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="40%" r="28%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#sun)" />
+  <path d="M0 760 C 300 700 900 700 1200 760 L1200 900 L0 900 Z" fill="#101d38" />
+  <g fill="#0a1226">
+    <rect x="300" y="560" width="600" height="200" />
+    <circle cx="360" cy="540" r="40" />
+    <rect x="340" y="540" width="40" height="60" />
+    <circle cx="600" cy="500" r="60" />
+    <rect x="560" y="500" width="80" height="100" />
+    <circle cx="840" cy="540" r="40" />
+    <rect x="820" y="540" width="40" height="60" />
+    <path d="M598 440 l6 -30 6 30 Z" />
+  </g>
+  <g fill="#182a4d" opacity="0.9">
+    <rect x="420" y="620" width="30" height="70" />
+    <rect x="750" y="620" width="30" height="70" />
+    <rect x="580" y="640" width="40" height="90" />
+  </g>
+  <g opacity="0.5" fill="#f59e0b">
+    <circle cx="150" cy="800" r="3" />
+    <circle cx="220" cy="820" r="2.5" />
+    <circle cx="1000" cy="800" r="3" />
+    <circle cx="1060" cy="830" r="2.5" />
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of a temple gopuram with palm trees, representing South India">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="40%" r="28%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#sun)" />
+  <path d="M0 740 L1200 740 L1200 900 L0 900 Z" fill="#101d38" />
+  <g fill="#0a1226">
+    <rect x="500" y="600" width="200" height="140" />
+    <path d="M500 600 L540 540 L560 600 Z" />
+    <path d="M560 600 L580 500 L600 600 Z" />
+    <path d="M600 600 L620 460 L640 600 Z" />
+    <path d="M640 600 L660 500 L680 600 Z" />
+    <path d="M680 600 L700 540 L700 600 Z" />
+    <circle cx="600" cy="440" r="10" />
+  </g>
+  <g fill="#0a1226">
+    <path d="M240 700 C 232 610 270 550 240 500 C 295 530 310 590 295 640 C 322 610 350 610 368 640 C 340 660 312 688 295 710 C 278 680 258 690 240 700 Z" />
+  </g>
+  <g fill="#0a1226">
+    <path d="M900 700 C 892 620 925 565 900 520 C 950 548 964 602 950 648 C 975 620 1000 620 1016 648 C 990 666 964 692 950 712 C 934 684 916 692 900 700 Z" />
+  </g>
+</svg>
