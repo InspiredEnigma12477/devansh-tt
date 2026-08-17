@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, navLinks, phoneLinks, services, whatsappMessages } from "@/data/business";
+import { business, googleMaps, navLinks, phoneLinks, services, whatsappMessages } from "@/data/business";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
@@ -61,15 +61,27 @@ export function Footer() {
                   {phoneLinks.alternate.display}
                 </a>
               </li>
-              <li className="text-white/40">Email — coming soon</li>
-              <li className="text-white/40">Office Address — coming soon</li>
+              <li>
+                <span>{business.city}, {business.region}</span>
+              </li>
+              <li>
+                <a href={googleMaps.shareUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-amber-400">
+                  View on Google Maps
+                </a>
+              </li>
             </ul>
-            <div className="mt-4 flex gap-3">
-              <span className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/40">Instagram — coming soon</span>
-            </div>
-            <div className="mt-2 flex gap-3">
-              <span className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/40">Facebook — coming soon</span>
-            </div>
+            {business.social.instagram ? (
+              <div className="mt-4">
+                <a
+                  href={business.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/70 transition-colors hover:border-amber-400 hover:text-amber-400"
+                >
+                  @devansh_travel on Instagram
+                </a>
+              </div>
+            ) : null}
           </div>
         </div>
 

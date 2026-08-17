@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { phoneLinks, whatsappMessages } from "@/data/business";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import { WhatsAppIcon, PhoneIcon, ChatIcon } from "@/components/ui/icons";
 
 export function MobileStickyCta() {
   return (
@@ -10,18 +9,15 @@ export function MobileStickyCta() {
         href={buildWhatsAppLink(whatsappMessages.general)}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-col items-center gap-1 bg-[#25D366] py-3 text-xs font-semibold text-white"
+        className="flex items-center justify-center gap-1.5 bg-[#25D366] py-3.5 text-sm font-semibold text-white"
       >
-        <WhatsAppIcon className="h-5 w-5" />
-        WhatsApp
+        <span aria-hidden="true">💬</span> WhatsApp
       </a>
-      <a href={phoneLinks.primary.tel} className="flex flex-col items-center gap-1 py-3 text-xs font-semibold text-white">
-        <PhoneIcon className="h-5 w-5 text-amber-400" />
-        Call
+      <a href={phoneLinks.primary.tel} className="flex items-center justify-center gap-1.5 py-3.5 text-sm font-semibold text-white">
+        <span aria-hidden="true">📞</span> Call
       </a>
-      <Link href="#enquiry" className="flex flex-col items-center gap-1 bg-amber-500 py-3 text-xs font-semibold text-navy-950">
-        <ChatIcon className="h-5 w-5" />
-        Enquire
+      <Link href="#enquiry" className="flex items-center justify-center gap-1.5 bg-amber-500 py-3.5 text-sm font-semibold text-navy-950">
+        <span aria-hidden="true">📝</span> Enquire
       </Link>
     </div>
   );

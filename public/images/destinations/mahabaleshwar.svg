@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of misty hill-station peaks with pine trees, representing Mahabaleshwar">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="34%" r="30%">
+      <stop offset="0%" stop-color="#f0f4fa" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#f0f4fa" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#glow)" />
+  <path d="M0 560 L200 420 L380 560 L560 380 L760 560 L960 440 L1200 580 L1200 900 L0 900 Z" fill="#223868" />
+  <path d="M0 680 L220 560 L440 680 L660 540 L880 680 L1080 580 L1200 660 L1200 900 L0 900 Z" fill="#101d38" />
+  <g fill="#0a1226">
+    <path d="M300 760 L330 690 L360 760 Z" />
+    <path d="M325 800 L355 730 L385 800 Z" />
+    <path d="M820 780 L850 710 L880 780 Z" />
+  </g>
+  <g opacity="0.35" fill="#f0f4fa">
+    <ellipse cx="300" cy="500" rx="140" ry="24" />
+    <ellipse cx="820" cy="540" rx="120" ry="20" />
+  </g>
+</svg>

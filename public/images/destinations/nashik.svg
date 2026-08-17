@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of vineyard rows beneath rolling hills, representing Nashik">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="40%" r="26%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#sun)" />
+  <path d="M0 560 L400 460 L800 540 L1200 460 L1200 900 L0 900 Z" fill="#223868" />
+  <g stroke="#101d38" stroke-width="10" opacity="0.8">
+    <line x1="80" y1="640" x2="1120" y2="640" />
+    <line x1="60" y1="700" x2="1140" y2="700" />
+    <line x1="100" y1="760" x2="1100" y2="760" />
+    <line x1="120" y1="820" x2="1080" y2="820" />
+  </g>
+  <g fill="#101d38" opacity="0.85">
+    <circle cx="200" cy="640" r="9" /><circle cx="260" cy="640" r="9" /><circle cx="320" cy="640" r="9" />
+    <circle cx="220" cy="700" r="9" /><circle cx="280" cy="700" r="9" /><circle cx="340" cy="700" r="9" />
+    <circle cx="700" cy="760" r="9" /><circle cx="760" cy="760" r="9" /><circle cx="820" cy="760" r="9" />
+  </g>
+</svg>

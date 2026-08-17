@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { business, siteUrl } from "@/data/business";
+import { business, googleMaps, siteUrl } from "@/data/business";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = `${business.name} — Tour Packages, Family, Group & Corporate Travel`;
-const description = business.description;
+const title = `Tours and Travels in Pune | Outstation Cabs — ${business.name}`;
+const description = `${business.description} Ertiga & Kia Carens rentals, Pune to Goa, Mahabaleshwar & Mumbai cabs, and custom tour packages.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,13 +28,17 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "Devansh Tours and Travel",
-    "tour packages India",
-    "family trip planner",
-    "group tour operator",
-    "corporate travel agency",
-    "customized tour packages",
-    "honeymoon packages India",
+    "Tours and Travels in Pune",
+    "Travel Agency in Pune",
+    "Outstation Cab Pune",
+    "Outstation Taxi Pune",
+    "Pune to Goa Cab",
+    "Pune to Mahabaleshwar Cab",
+    "Pune to Mumbai Cab",
+    "Pune Tour Packages",
+    "Family Tours From Pune",
+    "Ertiga Rental Pune",
+    "Kia Carens Rental Pune",
   ],
   authors: [{ name: business.name }],
   alternates: { canonical: "/" },
@@ -70,8 +74,21 @@ const structuredData = {
   description: business.description,
   telephone: `+91${business.phone.primary}`,
   url: siteUrl,
+  image: `${siteUrl}/opengraph-image`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: business.city,
+    addressRegion: business.region,
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: googleMaps.latitude,
+    longitude: googleMaps.longitude,
+  },
+  hasMap: googleMaps.shareUrl,
   areaServed: "IN",
-  sameAs: [],
+  sameAs: business.social.instagram ? [business.social.instagram] : [],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

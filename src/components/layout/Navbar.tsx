@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { navLinks } from "@/data/business";
-import { MenuIcon, CloseIcon } from "@/components/ui/icons";
+import { navLinks, whatsappMessages } from "@/data/business";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { MenuIcon, CloseIcon, WhatsAppIcon } from "@/components/ui/icons";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -45,12 +46,15 @@ export function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          <Link
-            href="#enquiry"
-            className="inline-flex items-center justify-center rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-navy-950 shadow-lg shadow-amber-500/20 transition-colors hover:bg-amber-400"
+          <a
+            href={buildWhatsAppLink(whatsappMessages.general)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/20 transition-colors hover:bg-[#1ebe5b]"
           >
-            Plan Your Trip
-          </Link>
+            <WhatsAppIcon className="h-4 w-4" />
+            WhatsApp Now
+          </a>
         </div>
 
         <button
@@ -80,13 +84,16 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-          <Link
-            href="#enquiry"
+          <a
+            href={buildWhatsAppLink(whatsappMessages.general)}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-navy-950"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white"
           >
-            Plan Your Trip
-          </Link>
+            <WhatsAppIcon className="h-4 w-4" />
+            WhatsApp Now
+          </a>
         </div>
       ) : null}
     </header>

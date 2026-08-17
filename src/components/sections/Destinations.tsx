@@ -9,7 +9,7 @@ export function Destinations() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="Tours & Packages"
-          title="Popular Destinations"
+          title="Popular Trips From Pune"
           subtitle="A glimpse of the journeys we help plan. Get in touch for an itinerary and quote tailored to your dates and group."
         />
 

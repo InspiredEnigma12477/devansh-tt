@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Illustrated silhouette of a waterfall between green monsoon hills, representing Lonavala">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182a4d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <path d="M0 600 L300 440 L600 600 L900 420 L1200 580 L1200 900 L0 900 Z" fill="#223868" />
+  <path d="M540 420 L560 900 L640 900 L660 420 Z" fill="#3c5fa0" opacity="0.7" />
+  <path d="M545 420 L655 420 L650 480 L550 480 Z" fill="#5c7fbe" />
+  <g fill="#0a1226" opacity="0.9">
+    <path d="M120 720 C 110 640 150 580 120 530 C 175 560 190 610 175 655 C 200 630 225 630 240 655 C 215 675 190 700 175 720 C 160 695 140 705 120 720 Z" />
+    <path d="M950 740 C 940 660 980 600 950 550 C 1005 580 1020 630 1005 675 C 1030 650 1055 650 1070 675 C 1045 695 1020 720 1005 740 C 990 715 970 725 950 740 Z" />
+  </g>
+</svg>

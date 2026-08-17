@@ -8,7 +8,7 @@ const variantClasses: Record<Variant, string> = {
   primary:
     "bg-amber-500 text-navy-950 hover:bg-amber-400 focus-visible:outline-amber-500 shadow-lg shadow-amber-500/20",
   secondary:
-    "bg-white text-navy-900 hover:bg-white/90 focus-visible:outline-white border border-white/10",
+    "bg-white text-navy-900 hover:bg-slate-50 focus-visible:outline-navy-900 border border-navy-900/15 shadow-sm",
   whatsapp:
     "bg-[#25D366] text-white hover:bg-[#1ebe5b] focus-visible:outline-[#25D366] shadow-lg shadow-[#25D366]/20",
   ghost:
